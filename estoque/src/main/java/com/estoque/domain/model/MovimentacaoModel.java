@@ -1,10 +1,10 @@
 package com.estoque.domain.model;
 
-public abstract class Movimentacao {
-    protected Produto produto;
+public abstract class MovimentacaoModel {
+    protected ProdutoModel produto;
     protected int quantidade;
 
-    public Movimentacao(Produto produto, int quantidade){
+    public MovimentacaoModel(ProdutoModel produto, int quantidade){
         this.produto = produto;
         this.quantidade = quantidade;
     }

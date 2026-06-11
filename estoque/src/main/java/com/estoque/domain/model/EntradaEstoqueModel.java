@@ -1,7 +1,7 @@
 package com.estoque.domain.model;
 
-public class EntradaEstoque extends Movimentacao{
-    public EntradaEstoque(Produto produto, int quantidade){
+public class EntradaEstoqueModel extends MovimentacaoModel{
+    public EntradaEstoqueModel(ProdutoModel produto, int quantidade){
         super(produto, quantidade);
 
         this.produto = produto;

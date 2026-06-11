@@ -1,20 +1,18 @@
 package com.estoque.domain.model;
 import com.estoque.domain.model.enums.*;
-
-import java.math.BigDecimal;
 import java.util.Objects;
 
-public class Produto {
+public class ProdutoModel {
     // Atributos
     private final int id;
     private String nome;
     private Categoria categoria;
-    private BigDecimal preco;
+    private double preco;
     private int quantidade;
     private int estoqueMinimo;
 
     // Construtor
-    public Produto(int id, String nome, Categoria categoria, BigDecimal preco, int quantidade, int estoqueMinimo){
+    public ProdutoModel(int id, String nome, Categoria categoria, double preco, int quantidade, int estoqueMinimo){
         this.id = id;
         this.nome = Objects.requireNonNull(nome, "Nome não pode ser nulo");
         this.categoria = categoria;
@@ -23,6 +21,7 @@ public class Produto {
         this.estoqueMinimo = estoqueMinimo;
     }
 
+    // GETTERS
     public int getId(){
         return id;
     }
@@ -35,7 +34,7 @@ public class Produto {
         return categoria;
     }
 
-    public BigDecimal getPreco(){
+    public double getPreco(){
         return preco;
     }
 
@@ -46,4 +45,13 @@ public class Produto {
     public int getEstoqueMinimo(){
         return estoqueMinimo;
     }
+
+    // SETTERS
+    public void setNome(String nome){
+        this.nome = nome;
+    }
+    public void setPreco(double preco){
+        this.preco = preco;
+    }
+
 }
